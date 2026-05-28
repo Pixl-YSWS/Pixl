@@ -47,7 +47,7 @@ export function Hero() {
         animate={{ opacity: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
-      <div className="relative z-10 flex h-screen w-full items-center justify-center flex-col pb-24 md:pb-56 lg:pb-110">
+      <div className="relative z-10 flex h-screen w-full items-center justify-center flex-col">
         <div className="flex flex-col items-center px-4">
           <motion.p
             className="font-pixel text-[#ff8c37] text-[4rem] sm:text-[7rem] md:text-[10rem] lg:text-[12rem] select-none leading-none"
