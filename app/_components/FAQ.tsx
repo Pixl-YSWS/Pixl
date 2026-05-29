@@ -11,8 +11,7 @@ const faqs = [
   },
   {
     question: "Do I need a team?",
-    answer:
-      "No. Come solo or with friends. Team matching can happen at the event.",
+    answer: "No. Come solo or with friends.",
   },
   {
     question: "Is this only for expert coders?",
