@@ -55,7 +55,8 @@ export function Hero() {
       <div className="relative z-10 flex h-screen w-full items-center justify-center flex-col">
         <div className="flex flex-col items-center px-4">
           <motion.p
-            className="font-pixel text-black text-[4rem] sm:text-[7rem] md:text-[10rem] lg:text-[12rem] select-none leading-none"
+            className="font-pixel text-[#ec3750] text-[6rem] sm:text-[9rem] md:text-[13rem] lg:text-[16rem] select-none leading-none"
+            style={{ textShadow: "var(--pixl-shadow)" }}
             initial={{ opacity: 0, y: -80, scale: 0.85 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
@@ -78,12 +79,12 @@ export function Hero() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleRSVP()}
-                className="w-full px-5 py-2 text-base sm:text-xl md:text-2xl focus:outline-0 bg-[#ec3750] text-white transition-all placeholder:text-white/60"
-                placeholder="Enter your email to continue...."
+                className="w-full px-5 py-3 text-lg sm:text-2xl md:text-3xl focus:outline-0 bg-[#ec3750] text-white transition-all placeholder:text-white/60"
+                placeholder="your@email.com"
               />
               <motion.button
                 onClick={handleRSVP}
-                className="text-center w-[30%] px-5 py-2 text-base sm:text-xl md:text-2xl hover:shadow-2xl shadow-[#ff8c37] bg-[#ec3750] cursor-pointer text-white hover:-translate-y-1 hover:-translate-x-1 border-black border-r-8 border-t-2 border-l-2 hover:border-b-12 border-b-8 transition-all"
+                className="text-center w-[30%] px-5 py-3 text-lg sm:text-2xl md:text-3xl bg-[#ec3750] cursor-pointer text-white hover:-translate-y-1 hover:-translate-x-1 border-black border-r-8 border-t-2 border-l-2 hover:border-b-12 border-b-8 transition-all"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
