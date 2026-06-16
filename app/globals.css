@@ -30,3 +30,23 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+:root {
+  --pixl-shadow:
+    2px 0 0 #16161e, -2px 0 0 #16161e,
+    0 2px 0 #16161e,  0 -2px 0 #16161e,
+    2px 2px 0 #16161e, -2px 2px 0 #16161e,
+    2px -2px 0 #16161e, -2px -2px 0 #16161e,
+    5px 5px 0 #16161e;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --pixl-shadow:
+      4px 0 0 #16161e, -4px 0 0 #16161e,
+      0 4px 0 #16161e,  0 -4px 0 #16161e,
+      4px 4px 0 #16161e, -4px 4px 0 #16161e,
+      4px -4px 0 #16161e, -4px -4px 0 #16161e,
+      10px 10px 0 #16161e;
+  }
+}
