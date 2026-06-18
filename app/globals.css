@@ -31,6 +31,19 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes scroll-ltr {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
+}
+
+.marquee-track {
+  animation: scroll-ltr 40s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
 :root {
   --pixl-shadow:
     2px 0 0 #16161e, -2px 0 0 #16161e,
