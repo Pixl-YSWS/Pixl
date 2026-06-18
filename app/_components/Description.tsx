@@ -7,7 +7,7 @@ const steps = [
   {
     step: 1,
     title: "Join the World",
-    description: "Enter Pixl and create your character in a retro 2D open world",
+    description: "Enter Pixl, create your character and join others in a retro 2D open world",
     video: "/step-1.mp4",
   },
   {
@@ -25,20 +25,14 @@ const steps = [
   {
     step: 4,
     title: "Sell your Projects",
-    description: "Submit your creations to merchants in your village",
+    description: "Submit your creations to merchants in your village and earn pixels, the in-game currency",
     video: "/step-4.mp4",
   },
   {
     step: 5,
-    title: "Earn Pixels",
-    description: "Collect the in-game currency and level up your character",
-    video: "/step-5.mp4",
-  },
-  {
-    step: 6,
     title: "Unlock Funding",
     description: "Convert pixels into real-world rewards & funding",
-    video: "/step-6.mp4",
+    video: "/step-5.mp4",
   },
 ];
 
@@ -140,6 +134,18 @@ export function WTFISTHIS() {
         {steps.map((s) => (
           <VideoCard key={s.step} s={s} />
         ))}
+        <motion.div variants={cardVariants} className="flex flex-col gap-2 text-left">
+          <div className="aspect-square flex flex-col">
+            <div className="flex-1 flex flex-col justify-center gap-1">
+              <p className="font-pixel text-[#ff8c37] leading-none" style={{ fontSize: "clamp(1rem, 5vw, 4rem)" }}>You Ship</p>
+              <p className="text-black/70 leading-snug text-xs sm:text-sm md:text-lg lg:text-2xl">Hardware & software sidequests given by NPCs, harder quests unlock as you level up</p>
+            </div>
+            <div className="flex-1 flex flex-col justify-center gap-1">
+              <p className="font-pixel text-[#ec3750] leading-none" style={{ fontSize: "clamp(1rem, 5vw, 4rem)" }}>We Ship</p>
+              <p className="text-black/70 leading-snug text-xs sm:text-sm md:text-lg lg:text-2xl">Niche prizes & grants matched to what you built, every level has its rewards</p>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );

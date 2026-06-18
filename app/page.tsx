@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Menu } from "./_components/Menu";
 import { Hero } from "./_components/Hero";
-import { WTFISTHIS } from "./_components/WTF-is-this";
+import { WTFISTHIS } from "./_components/Description";
 import { FAQ } from "./_components/FAQ";
 import { Footer } from "./_components/Footer";
 
