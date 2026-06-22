@@ -8,13 +8,13 @@ const steps = [
     step: 1,
     title: "Join the World",
     description: "Enter Pixl, create your character and join others in a retro 2D open world",
-    video: "/step-1.mp4",
+    video: "https://cdn.hackclub.com/019eee3b-5ab8-7923-9c8c-3a901acadfce/step-1.mp4",
   },
   {
     step: 2,
     title: "Explore Regions",
     description: "Discover cyberpunk cities, underwater zones & more",
-    video: "/step-2.mp4",
+    video: "https://cdn.hackclub.com/019eee3b-a3fa-7c98-8c0d-76f7b0ac78e4/step-2.mp4",
   },
   {
     step: 3,
@@ -120,8 +120,7 @@ export function WTFISTHIS() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
       >
-        A pixel-themed YSWS where you build real projects to level up your
-        character and unlock real-world funding.
+        A pixel-themed YSWS where you build real projects to level up your character and unlock real-world funding. Go on an adventure to explore new things, create fun projects with others, chat with NPCs, and test projects with others and stuff.
       </motion.p>
 
       <motion.div

@@ -44,7 +44,7 @@ export function Hero() {
         playsInline
         poster="/hero-bg1.png"
       >
-        <source src="/hero-bg.mp4" type="video/mp4" />
+        <source src="https://cdn.hackclub.com/019eee3a-c90e-79da-a7cc-9251883cfb5a/hero-bg.mp4" type="video/mp4" />
       </video>
       <motion.div
         className="absolute inset-0 bg-black"
