@@ -1,14 +1,25 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const RSVP_KEY = "pixl-rsvped";
 
 export function Hero() {
   const [email, setEmail] = useState("");
   const [shake, setShake] = useState(false);
   const [msg, setMsg] = useState("");
+  const [rsvped, setRsvped] = useState(false);
   const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
+  useEffect(() => {
+    if (localStorage.getItem(RSVP_KEY)) setRsvped(true);
+  }, []);
+
   async function handleRSVP() {
+    if (rsvped) {
+      window.open(`https://rsvp.soon.it/pixl`, "_blank");
+      return;
+    }
     if (!email) {
       triggerError("yo, drop your email first 👀");
       return;
@@ -23,6 +34,9 @@ export function Hero() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
     });
+
+    localStorage.setItem(RSVP_KEY, "1");
+    setRsvped(true);
 
     window.open(`https://rsvp.soon.it/pixl`, "_blank");
   }
@@ -69,28 +83,42 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.7 }}
           >
-            <motion.div
-              className="flex w-full"
-              animate={shake ? { x: [0, -10, 10, -8, 8, -4, 4, 0] } : {}}
-              transition={{ duration: 0.4 }}
-            >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleRSVP()}
-                className="w-full px-5 py-3 text-lg sm:text-2xl md:text-3xl focus:outline-0 bg-[#ec3750] text-white transition-all placeholder:text-white/60"
-                placeholder="your@email.com"
-              />
-              <motion.button
-                onClick={handleRSVP}
-                className="text-center w-[30%] px-5 py-3 text-lg sm:text-2xl md:text-3xl bg-[#ec3750] cursor-pointer text-white hover:-translate-y-1 hover:-translate-x-1 border-black border-r-8 border-t-2 border-l-2 hover:border-b-12 border-b-8 transition-all"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
+            {rsvped ? (
+              <div className="flex w-full flex-col items-center bg-white px-5 py-3 text-black border-black border-r-8 border-t-2 border-l-2 border-b-8">
+                <p className="text-lg sm:text-2xl md:text-3xl text-center">
+                  you&apos;re already in 🎉
+                </p>
+                <button
+                  onClick={() => window.open(`https://rsvp.soon.it/pixl`, "_blank")}
+                  className="mt-1 text-sm underline cursor-pointer opacity-80 hover:opacity-100"
+                >
+                  view your RSVP
+                </button>
+              </div>
+            ) : (
+              <motion.div
+                className="flex w-full"
+                animate={shake ? { x: [0, -10, 10, -8, 8, -4, 4, 0] } : {}}
+                transition={{ duration: 0.4 }}
               >
-                RSVP
-              </motion.button>
-            </motion.div>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleRSVP()}
+                  className="w-full px-5 py-3 text-lg sm:text-2xl md:text-3xl focus:outline-0 bg-[#ec3750] text-white transition-all placeholder:text-white/60"
+                  placeholder="your@email.com"
+                />
+                <motion.button
+                  onClick={handleRSVP}
+                  className="text-center w-[30%] px-5 py-3 text-lg sm:text-2xl md:text-3xl bg-[#ec3750] cursor-pointer text-white hover:-translate-y-1 hover:-translate-x-1 border-black border-r-8 border-t-2 border-l-2 hover:border-b-12 border-b-8 transition-all"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  RSVP
+                </motion.button>
+              </motion.div>
+            )}
             <AnimatePresence>
               {msg && (
                 <motion.p
