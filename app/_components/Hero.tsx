@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const RSVP_KEY = "pixl-rsvped";
@@ -9,10 +9,19 @@ export function Hero() {
   const [shake, setShake] = useState(false);
   const [msg, setMsg] = useState("");
   const [rsvped, setRsvped] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   useEffect(() => {
     if (localStorage.getItem(RSVP_KEY)) setRsvped(true);
+  }, []);
+
+  useLayoutEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.defaultMuted = true;
+    video.muted = true;
+    video.play().catch(() => {});
   }, []);
 
   async function handleRSVP() {
@@ -51,11 +60,13 @@ export function Hero() {
   return (
     <div className="relative h-screen">
       <video
+        ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
         poster="/hero-bg1.png"
       >
         <source src="https://cdn.hackclub.com/019eee3a-c90e-79da-a7cc-9251883cfb5a/hero-bg.mp4" type="video/mp4" />
@@ -84,13 +95,13 @@ export function Hero() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.7 }}
           >
             {rsvped ? (
-              <div className="flex w-full flex-col items-center bg-white px-5 py-3 text-black border-black border-r-8 border-t-2 border-l-2 border-b-8">
-                <p className="text-lg sm:text-2xl md:text-3xl text-center">
-                  you&apos;re already in 🎉
+              <div className="flex w-full flex-col items-center bg-[#ec3750] px-5 py-1.5 text-white border-black border-r-8 border-t-2 border-l-2 border-b-8">
+                <p className="text-base sm:text-lg text-center">
+                  you&apos;re already in
                 </p>
                 <button
                   onClick={() => window.open(`https://rsvp.soon.it/pixl`, "_blank")}
-                  className="mt-1 text-sm underline cursor-pointer opacity-80 hover:opacity-100"
+                  className="text-xs underline cursor-pointer opacity-80 hover:opacity-100"
                 >
                   view your RSVP
                 </button>
