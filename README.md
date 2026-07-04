@@ -45,16 +45,34 @@ public/                  Images, hero/step videos, shop item art
 
 `app/api/rsvp/route.ts` checks Airtable for an existing record with that email (to avoid duplicates) and creates a new one if none exists.
 
-## Environment variables
+## How the Pixo DM API works
 
-The RSVP endpoint needs an Airtable base with a `Signups` table containing an `Email` field:
+`app/api/pixo/dm/route.ts` lets an internal moderation site trigger a Slack DM from the Pixo/Pixorpheus bot. This is meant to be called server to server, not from a browser.
+
+Request:
+
+```
+POST /api/pixo/dm
+Authorization: Bearer <PIXO_API_SECRET>
+Content-Type: application/json
+
+{ "slackUserId": "U0123456789", "action": "ban" | "warning" }
+```
+
+The route checks the `Authorization` header against `PIXO_API_SECRET` before doing anything, then posts a predefined message for the given `action` to that Slack user using `chat.postMessage`. Message wording lives in the `MESSAGES` object at the top of the file, edit it there if the copy needs to change.
+
+Since this route is deployed on the same public domain as the marketing site, the shared secret is what stops random requests from DMing people as Pixo, being logged in on the internal site is not enough on its own.
+
+## Environment variables
 
 ```
 AIRTABLE_BASE_ID=your_airtable_base_id
 AIRTABLE_TOKEN=your_airtable_personal_access_token
+SLACK_BOT_TOKEN=xoxb-your-pixo-bot-token
+PIXO_API_SECRET=a_long_random_string_shared_with_the_internal_site
 ```
 
-Put these in a `.env.local` file at the project root (not committed, see `.gitignore`).
+Put these in a `.env.local` file at the project root (not committed, see `.gitignore`). `SLACK_BOT_TOKEN` needs the `chat:write` scope for Pixo to DM users.
 
 ## Getting started
 
