@@ -2,7 +2,19 @@
   "permissions": {
     "allow": [
       "Bash(bun install *)",
-      "Bash(git ls-remote *)"
+      "Bash(git ls-remote *)",
+      "Bash(openssl rand *)",
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(git merge *)",
+      "Bash(git clone *)",
+      "Bash(find /private/tmp/claude-501/-Users-gabin-Pixl/ff087f87-b170-400e-9c45-0d8a1a422678/scratchpad/pixorpheus -maxdepth 2 -not -path */.git*)",
+      "Read(//Users/gabin/Desktop/pixorpheus/**)",
+      "Bash(git -C /Users/gabin/Desktop/pixorpheus remote -v)",
+      "Bash(git -C /Users/gabin/Desktop/pixorpheus status)",
+      "Bash(cp /private/tmp/claude-501/-Users-gabin-Pixl/ff087f87-b170-400e-9c45-0d8a1a422678/scratchpad/pixorpheus/dashboard.js /Users/gabin/Desktop/pixorpheus/dashboard.js)",
+      "Bash(cp /private/tmp/claude-501/-Users-gabin-Pixl/ff087f87-b170-400e-9c45-0d8a1a422678/scratchpad/pixorpheus/README.md /Users/gabin/Desktop/pixorpheus/README.md)",
+      "Bash(git -C /Users/gabin/Desktop/pixorpheus diff --stat)"
     ]
   }
 }
