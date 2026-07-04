@@ -1,6 +1,6 @@
 # Pixl
 
-Pixl is a pixel-themed YSWS (You Ship, We Ship) run by Hack Club. Teenagers build real projects (web, mobile, hardware, game dev, pixel art...) to level up a character in a retro 2D world, complete sidequests given by NPCs, and unlock real-world rewards for what they ship.
+Pixl is a pixel-themed YSWS (You Ship, We Ship) run by Gabin, Ridit and Ricky and soon sponsored by Hack Club. Teenagers build real projects (web, mobile, hardware, game dev, pixel art...) to level up a character in a retro 2D world, complete sidequests given by NPCs, and unlock real-world rewards for what they ship.
 
 This repository holds the marketing/landing site: a single-page Next.js app that explains the event, collects RSVPs, and previews the sidequests and shop.
 
