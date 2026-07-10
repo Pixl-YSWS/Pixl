@@ -21,7 +21,27 @@ export function Hero() {
     if (!video) return;
     video.defaultMuted = true;
     video.muted = true;
-    video.play().catch(() => {});
+
+    function tryPlay() {
+      video?.play().catch(() => {});
+    }
+
+    tryPlay();
+    video.addEventListener("canplay", tryPlay);
+
+    const events = ["pointerdown", "touchstart", "keydown", "scroll"];
+    function onInteract() {
+      tryPlay();
+      if (video && !video.paused) {
+        events.forEach((e) => window.removeEventListener(e, onInteract));
+      }
+    }
+    events.forEach((e) => window.addEventListener(e, onInteract, { passive: true }));
+
+    return () => {
+      video.removeEventListener("canplay", tryPlay);
+      events.forEach((e) => window.removeEventListener(e, onInteract));
+    };
   }, []);
 
   async function handleRSVP() {
@@ -61,11 +81,13 @@ export function Hero() {
     <div className="relative h-screen">
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         autoPlay
         muted
         loop
         playsInline
+        disablePictureInPicture
+        disableRemotePlayback
         preload="auto"
         poster="/hero-bg1.png"
       >

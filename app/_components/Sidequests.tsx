@@ -2,6 +2,9 @@
 
 import { motion, useMotionValue, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+
+const MotionLink = motion(Link);
 
 const levels = [
   {
@@ -230,12 +233,6 @@ export function Sidequests({ onRevealShop }: { onRevealShop?: () => void }) {
         </motion.p>
       </div>
 
-      <Marquee>
-        {[...levels, ...levels].map((l, i) => (
-          <SidequestCard key={i} l={l} />
-        ))}
-      </Marquee>
-
       <motion.div
         className="max-w-2xl w-full border-2 border-black bg-[#fffaf7] px-6 py-5 text-center font-sans cursor-pointer hover:-translate-y-1 hover:-translate-x-1 transition-all"
         style={{ boxShadow: "4px 4px 0px #000" }}
@@ -251,6 +248,28 @@ export function Sidequests({ onRevealShop }: { onRevealShop?: () => void }) {
           You get the base prize for each sidequest you complete. The more hours you put in, the more currency you earn to spend in the shop. Don't want the listed prize or already have it? No problem, swap it for anything of equivalent value.
         </p>
       </motion.div>
+
+      <Marquee>
+        {[...levels, ...levels].map((l, i) => (
+          <SidequestCard key={i} l={l} />
+        ))}
+      </Marquee>
+
+      <MotionLink
+        href="/example-submission"
+        className="max-w-2xl w-full border-2 border-black bg-[#fffaf7] px-6 py-5 text-center font-sans cursor-pointer hover:-translate-y-1 hover:-translate-x-1 transition-all block"
+        style={{ boxShadow: "4px 4px 0px #ec3750" }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        whileHover={{ boxShadow: "8px 8px 0px #ec3750" } as any}
+      >
+        <p className="font-pixel text-lg mb-2">See a full example submission</p>
+        <p className="text-black/60 text-sm leading-relaxed">
+          Not sure what a complete submission looks like? Check out this example that hits every deadline.
+        </p>
+      </MotionLink>
     </section>
   );
 }
