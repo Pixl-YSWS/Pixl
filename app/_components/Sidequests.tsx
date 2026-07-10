@@ -2,9 +2,6 @@
 
 import { motion, useMotionValue, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-
-const MotionLink = motion(Link);
 
 const levels = [
   {
@@ -255,8 +252,10 @@ export function Sidequests({ onRevealShop }: { onRevealShop?: () => void }) {
         ))}
       </Marquee>
 
-      <MotionLink
-        href="/example-submission"
+      <motion.a
+        href="https://docs.google.com/document/d/1ROqv90L59KqjQ4uCTDhhXNUn2yssMYlLJyvMBjA5xFA/edit?usp=sharing"
+        target="_blank"
+        rel="noreferrer"
         className="max-w-2xl w-full border-2 border-black bg-[#fffaf7] px-6 py-5 text-center font-sans cursor-pointer hover:-translate-y-1 hover:-translate-x-1 transition-all block"
         style={{ boxShadow: "4px 4px 0px #ec3750" }}
         initial={{ opacity: 0, y: 20 }}
@@ -269,7 +268,7 @@ export function Sidequests({ onRevealShop }: { onRevealShop?: () => void }) {
         <p className="text-black/60 text-sm leading-relaxed">
           Not sure what a complete submission looks like? Check out this example that hits every deadline.
         </p>
-      </MotionLink>
+      </motion.a>
     </section>
   );
 }

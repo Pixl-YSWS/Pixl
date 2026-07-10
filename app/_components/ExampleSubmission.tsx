@@ -22,8 +22,8 @@ export function ExampleSubmission() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F5EED2] px-4 py-24 flex flex-col items-center gap-6 text-black">
-      <h1 className="font-pixel text-4xl md:text-5xl text-center">Example Submission</h1>
+    <div className="w-full flex flex-col items-center gap-6 text-black pt-4">
+      <h3 className="font-pixel text-2xl md:text-3xl text-center">Example Submission</h3>
 
       {canEdit ? (
         <>
