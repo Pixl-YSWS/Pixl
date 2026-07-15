@@ -125,9 +125,12 @@ function ShopCard({ item }: { item: { name: string; image: string; price?: numbe
       style={{ boxShadow: "4px 4px 0px #000" }}
       whileHover={{ boxShadow: "8px 8px 0px #000" } as any}
     >
-      <div className="aspect-square bg-black/70 border-b-2 border-black flex flex-col items-center justify-center gap-2">
-        <p className="font-pixel text-[#ec3750] text-2xl">Pixl</p>
-        <p className="font-pixel text-[#F5EED2] text-xs tracking-wide">Coming Soon</p>
+      <div className="aspect-square bg-[#fffaf7] border-b-2 border-black flex items-center justify-center overflow-hidden p-3">
+        <img
+          src={item.image}
+          alt={item.name}
+          className="max-w-full max-h-full object-contain"
+        />
       </div>
       <div className="px-3 py-3 flex flex-col gap-1">
         <p className="font-pixel text-sm leading-snug">{item.name}</p>
@@ -175,6 +178,15 @@ export function Shop() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           Earn pixels by completing sidequests and spend them on real rewards.
+        </motion.p>
+        <motion.p
+          className="mt-2 text-black/50 text-sm font-sans"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+        >
+          The shop is still under construction and isn&apos;t complete yet, more items coming!
         </motion.p>
       </div>
 

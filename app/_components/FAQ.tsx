@@ -29,8 +29,21 @@ const faqs = [
       "Yes! Each of your projects will be funded, and the event itself is 100% free.",
   },
   {
-    question: "What is Hackclub?",
-    answer: `Hack Club is a 501(c)(3) nonprofit (EIN: 81-2908499) that helps high school students learn to code and build projects. We're the largest teen-led coding community, with over 50,000 students building projects with their friends each year.`,
+    question: "Who is running Pixl?",
+    answer: (
+      <>
+        A big team of friends!{" "}
+        <a
+          href="https://docs.google.com/document/d/1Bq4wNR3PsDhs6BdLDFssY3Ltl-pAnn6IoL8DVkVsPXo/edit?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="text-[#ec3750] font-bold underline"
+          onClick={(e) => e.stopPropagation()}
+        >
+          Meet the whole team here.
+        </a>
+      </>
+    ),
   },
   {
     question: "I have more questions!",
@@ -46,7 +59,7 @@ function FAQItem({
   onToggle,
 }: {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
   index: number;
   open: boolean;
   onToggle: () => void;

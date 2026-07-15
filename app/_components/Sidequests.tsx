@@ -75,8 +75,8 @@ const levels = [
     quest: {
       title: "Design your own region",
       description:
-        "Create a brand new region for the Pixl world. Design the map, the NPCs, the assets and the sidequests that come with it. If it's polished enough, your region gets added to the real game for everyone to explore.",
-      tags: ["Pixel Art", "Design", "Game Dev"],
+        "Create a new region for the Pixl world: map, NPCs, assets and sidequests. Then code it into a playable demo, it's not just an art quest. If it's polished enough, it gets added to the real game.",
+      tags: ["Pixel Art", "Design", "Game Dev", "Code"],
     },
     prize: {
       title: "Graphics Tablet",
@@ -91,8 +91,8 @@ const levels = [
     quest: {
       title: "Draw sprites for the Item Shop",
       description:
-        "Loot, the item shop NPC, needs a pack of pixel art icons for his inventory: potions, weapons, tools and collectibles. The best ones get added to the real game.",
-      tags: ["Pixel Art", "Design"],
+        "Loot, the item shop NPC, needs a pack of pixel art icons: potions, weapons, tools and collectibles. Build a website to showcase them, art can be at most 50% of your submitted time. The best ones get added to the real game.",
+      tags: ["Pixel Art", "Design", "Web"],
     },
     prize: {
       title: "Sticker Pack + Poster",
@@ -197,7 +197,7 @@ function Marquee({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Sidequests({ onRevealShop }: { onRevealShop?: () => void }) {
+export function Sidequests() {
   return (
     <section className="my-10 md:my-20 px-4 md:px-8 flex flex-col items-center gap-16" id="sidequests">
       <div className="text-center">
@@ -231,14 +231,12 @@ export function Sidequests({ onRevealShop }: { onRevealShop?: () => void }) {
       </div>
 
       <motion.div
-        className="max-w-2xl w-full border-2 border-black bg-[#fffaf7] px-6 py-5 text-center font-sans cursor-pointer hover:-translate-y-1 hover:-translate-x-1 transition-all"
+        className="max-w-2xl w-full border-2 border-black bg-[#fffaf7] px-6 py-5 text-center font-sans"
         style={{ boxShadow: "4px 4px 0px #000" }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        whileHover={{ boxShadow: "8px 8px 0px #000" } as any}
-        onClick={onRevealShop}
       >
         <p className="font-pixel text-lg mb-2">How rewards work</p>
         <p className="text-black/60 text-sm leading-relaxed">
