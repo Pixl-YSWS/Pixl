@@ -19,6 +19,11 @@ const faqs = [
       "Nope. Bring curiosity. Mentors will help with ideas, debugging, demos, and shipping.",
   },
   {
+    question: "When is Pixl starting?",
+    answer:
+      "We're still looking for a sponsor, but Pixl should kick off around August or September. Stay tuned!",
+  },
+  {
     question: "Is this free?",
     answer:
       "Yes! Each of your projects will be funded, and the event itself is 100% free.",

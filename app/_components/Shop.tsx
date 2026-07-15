@@ -77,6 +77,30 @@ const generalItems = [
     hours: 20,
     image: "/shop/keyboard.png",
   },
+  {
+    name: "Aseprite License",
+    price: 200,
+    hours: 4,
+    image: "/shop/aseprite.png",
+  },
+  {
+    name: "Pixl Tamagotchi DIY Kit",
+    price: 300,
+    hours: 6,
+    image: "/shop/tamagotchi.png",
+  },
+  {
+    name: "Wacom Intuos (Small)",
+    price: 800,
+    hours: 16,
+    image: "/shop/wacom.png",
+  },
+  {
+    name: "iPad (11th gen)",
+    price: 4500,
+    hours: 90,
+    image: "/shop/ipad.png",
+  },
 ];
 
 const cardVariants = {
