@@ -27,14 +27,14 @@ const sidequestRewards = [
   {
     id: "graphics-tablet",
     name: "Graphics Tablet",
-    description: "A drawing tablet to sketch, paint and design your pixel art.",
+    description: "A drawing tablet to sketch, paint and design your pixel art and ship even more to pixl",
     sidequest: "Design your own region",
     image: "/shop/tablet.png",
   },
   {
     id: "stickers-poster",
     name: "Sticker Pack + Poster",
-    description: "PIXL stickers and a printed poster for your wall.",
+    description: "PIXL stickers and a printed poster of your assets for your wall.",
     sidequest: "Draw sprites for the Item Shop",
     image: "/shop/stickers.png",
   },
@@ -58,7 +58,7 @@ const generalItems = [
   {
     id: "hc-stickers",
     name: "Hack Club Sticker Pack",
-    description: "An envelope of Hack Club stickers, shipped anywhere.",
+    description: "An envelope of Hack Club and Pixl stickers",
     price: 100,
     hours: 2,
     image: "/shop/hc-stickers.png",
@@ -74,7 +74,7 @@ const generalItems = [
   {
     id: "blahaj",
     name: "3D Printed Blahaj",
-    description: "A 3D printed mini Blahaj. The shark. You need it.",
+    description: "A 3D printed pixelated mini Blahaj, made by Ricky and shipped to your house",
     price: 100,
     hours: 2,
     image: "/shop/blahaj.png",
@@ -82,9 +82,9 @@ const generalItems = [
   {
     id: "pixl-poster",
     name: "PIXL Poster",
-    description: "A printed PIXL poster to decorate your room.",
-    price: 100,
-    hours: 2,
+    description: "A poster grant to buy nay poster you want. Everyone love posters",
+    price: 200,
+    hours: 4,
     image: "/shop/poster.png",
   },
   {
@@ -105,10 +105,10 @@ const generalItems = [
   },
   {
     id: "api-credits",
-    name: "API Credits ($20)",
-    description: "$20 of AI API credits for the provider of your choice.",
-    price: 200,
-    hours: 4,
+    name: "AI Credits ($10)",
+    description: "a $10 grant for AI credits for the provider of your choice.",
+    price: 100,
+    hours: 2,
     image: "/shop/api.png",
   },
   {
@@ -122,9 +122,9 @@ const generalItems = [
   {
     id: "indie-game",
     name: "Indie Game of Your Choice",
-    description: "Hollow Knight, Celeste, Stardew... any indie game up to $20 on Steam.",
+    description: "Hollow Knight, Celeste, Stardew... any indie game up to $30 on Steam.",
     price: 200,
-    hours: 4,
+    hours: 5,
     image: "/shop/indie-game.png",
   },
   {
@@ -137,16 +137,16 @@ const generalItems = [
   },
   {
     id: "assets-grant",
-    name: "Game Assets Grant ($25)",
-    description: "$25 to spend on tilesets, sprites, music and sounds for your game.",
-    price: 250,
-    hours: 5,
+    name: "Game Assets Grant ($10)",
+    description: "$10 to spend on tilesets, sprites, music and sounds for your game.",
+    price: 125,
+    hours: 2.5,
     image: "/shop/assets-grant.png",
   },
   {
     id: "tamagotchi-kit",
     name: "Pixl Tamagotchi DIY Kit",
-    description: "Solder and code your own pocket pet.",
+    description: "Solder and code your own pocket pet, designed by mangoman.",
     price: 300,
     hours: 6,
     image: "/shop/tamagotchi.png",
@@ -155,16 +155,16 @@ const generalItems = [
     id: "godot-plush",
     name: "Godot Plush",
     description: "The official Godot robot plushie. Emotional support for game jams.",
-    price: 300,
-    hours: 6,
+    price: 350,
+    hours: 7,
     image: "/shop/godot-plush.png",
   },
   {
     id: "pixl-hoodie",
     name: "PIXL Hoodie",
     description: "Limited PIXL hoodie with the logo on the chest.",
-    price: 350,
-    hours: 7,
+    price: 500,
+    hours: 10,
     image: "/shop/hoodie.png",
   },
   {
@@ -184,14 +184,6 @@ const generalItems = [
     image: "/shop/retro-handheld.png",
   },
   {
-    id: "arduino-kit",
-    name: "Arduino Starter Kit",
-    description: "The official Arduino kit with board, components and project book.",
-    price: 650,
-    hours: 13,
-    image: "/shop/arduino.png",
-  },
-  {
     id: "raspberry-pi-5",
     name: "Raspberry Pi 5",
     description: "A Raspberry Pi 5 to run your servers, emulators and experiments.",
@@ -203,8 +195,8 @@ const generalItems = [
     id: "wacom-intuos",
     name: "Wacom Intuos (Small)",
     description: "A Wacom drawing tablet, the classic for digital art.",
-    price: 800,
-    hours: 16,
+    price: 600,
+    hours: 12,
     image: "/shop/wacom.png",
   },
   {
@@ -398,6 +390,15 @@ export function Shop() {
               <ShopCard key={item.id} item={item} />
             ))}
           </motion.div>
+          <motion.p
+            className="font-pixel text-center text-black/50 text-lg mt-10"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            ...and even more coming!
+          </motion.p>
         </div>
       </div>
     </section>

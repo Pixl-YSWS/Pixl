@@ -8,25 +8,24 @@ Les descriptions affichées sur le site sont dans `app/_components/Shop.tsx` (ch
 
 | ID | Nom | Description | Prix (px) | Heures | Valeur ($) | Image |
 |---|---|---|---|---|---|---|
-| `hc-stickers` | Hack Club Sticker Pack | An envelope of Hack Club stickers, shipped anywhere. | 100 | 2 h | ~10 $ | `/shop/hc-stickers.png` |
+| `hc-stickers` | Hack Club Sticker Pack | An envelope of Hack Club and Pixl stickers | 100 | 2 h | ~10 $ | `/shop/hc-stickers.png` |
 | `pixel-composer` | Pixel Composer License | Node-based tool to make effects and animations for pixel art. | 100 | 2 h | ~10 $ | `/shop/pixel-composer.png` |
-| `blahaj` | 3D Printed Blahaj | A 3D printed mini Blahaj. The shark. You need it. | 100 | 2 h | ~10 $ | `/shop/blahaj.png` |
-| `pixl-poster` | PIXL Poster | A printed PIXL poster to decorate your room. | 100 | 2 h | ~10 $ | `/shop/poster.png` |
+| `blahaj` | 3D Printed Blahaj | A 3D printed pixelated mini Blahaj, made by Ricky and shipped to your house | 100 | 2 h | ~10 $ | `/shop/blahaj.png` |
+| `api-credits` | AI Credits ($10) | a $10 grant for AI credits for the provider of your choice. | 100 | 2 h | 10 $ | `/shop/api.png` |
+| `assets-grant` | Game Assets Grant ($10) | $10 to spend on tilesets, sprites, music and sounds for your game. | 125 | 2.5 h | 10 $ | `/shop/assets-grant.png` |
 | `esp32-kit` | ESP32 Starter Kit | ESP32 dev board with a breadboard and components to start hacking. | 150 | 3 h | ~15 $ | `/shop/esp32.png` |
 | `pico8` | PICO-8 License | The fantasy console. Code, draw and compose tiny games in one tool. | 150 | 3 h | 15 $ | `/shop/pico8.png` |
-| `api-credits` | API Credits ($20) | $20 of AI API credits for the provider of your choice. | 200 | 4 h | 20 $ | `/shop/api.png` |
+| `pixl-poster` | PIXL Poster | A poster grant to buy nay poster you want. Everyone love posters | 200 | 4 h | ~20 $ | `/shop/poster.png` |
 | `aseprite` | Aseprite License | The pixel art editor. Animated sprites, tilesets and more. | 200 | 4 h | ~20 $ | `/shop/aseprite.png` |
-| `indie-game` | Indie Game of Your Choice | Hollow Knight, Celeste, Stardew... any indie game up to $20 on Steam. | 200 | 4 h | ≤20 $ | `/shop/indie-game.png` |
+| `indie-game` | Indie Game of Your Choice | Hollow Knight, Celeste, Stardew... any indie game up to $30 on Steam. | 200 | 5 h | ≤30 $ | `/shop/indie-game.png` |
 | `switch-online` | Nintendo Switch Online (1 year) | 12 months of Nintendo Switch Online for your account. | 200 | 4 h | 20 $ | `/shop/switch-online.png` |
-| `assets-grant` | Game Assets Grant ($25) | $25 to spend on tilesets, sprites, music and sounds for your game. | 250 | 5 h | 25 $ | `/shop/assets-grant.png` |
-| `tamagotchi-kit` | Pixl Tamagotchi DIY Kit | Solder and code your own pocket pet. | 300 | 6 h | ~30 $ | `/shop/tamagotchi.png` |
-| `godot-plush` | Godot Plush | The official Godot robot plushie. Emotional support for game jams. | 300 | 6 h | ~30 $ | `/shop/godot-plush.png` |
-| `pixl-hoodie` | PIXL Hoodie | Limited PIXL hoodie with the logo on the chest. | 350 | 7 h | ~35 $ | `/shop/hoodie.png` |
+| `tamagotchi-kit` | Pixl Tamagotchi DIY Kit | Solder and code your own pocket pet, designed by mangoman. | 300 | 6 h | ~30 $ | `/shop/tamagotchi.png` |
+| `godot-plush` | Godot Plush | The official Godot robot plushie. Emotional support for game jams. | 350 | 7 h | ~30 $ | `/shop/godot-plush.png` |
+| `pixl-hoodie` | PIXL Hoodie | Limited PIXL hoodie with the logo on the chest. | 500 | 10 h | ~50 $ | `/shop/hoodie.png` |
 | `github-pro` | GitHub Pro (1 year) | A year of GitHub Pro for your projects. | 500 | 10 h | ~50 $ | `/shop/github.png` |
 | `retro-handheld` | Retro Handheld (RG35XX / Miyoo Mini+) | A retro handheld to play your builds and the classics on the go. | 600 | 12 h | ~60 $ | `/shop/retro-handheld.png` |
-| `arduino-kit` | Arduino Starter Kit | The official Arduino kit with board, components and project book. | 650 | 13 h | ~65 $ | `/shop/arduino.png` |
+| `wacom-intuos` | Wacom Intuos (Small) | A Wacom drawing tablet, the classic for digital art. | 600 | 12 h | ~60 $ | `/shop/wacom.png` |
 | `raspberry-pi-5` | Raspberry Pi 5 | A Raspberry Pi 5 to run your servers, emulators and experiments. | 800 | 16 h | ~80 $ | `/shop/rpi.png` |
-| `wacom-intuos` | Wacom Intuos (Small) | A Wacom drawing tablet, the classic for digital art. | 800 | 16 h | ~80 $ | `/shop/wacom.png` |
 | `gamemaker` | GameMaker Pro | GameMaker Professional license to export your games everywhere. | 1000 | 20 h | ~100 $ | `/shop/gamemaker.png` |
 | `mechanical-keyboard` | Mechanical Keyboard | A solid mechanical keyboard for late night game jams. | 1000 | 20 h | ~100 $ | `/shop/keyboard.png` |
 | `sony-headphones` | Sony WH-1000XM4 | Noise cancelling headphones to get in the zone. | 2500 | 50 h | ~250 $ | `/shop/sony-headphones.png` |
@@ -41,12 +40,16 @@ Les descriptions affichées sur le site sont dans `app/_components/Shop.tsx` (ch
 | `domain-stickers` | Domain + Sticker Pack | A domain of your choice for a year, plus a pack of stickers. | Build a merchant's storefront | `/shop/domain.png` |
 | `apple-dev` | Apple Developer Account | A year of the Apple Developer Program to ship your app on the App Store. | Ship a mobile app for the Traveler | `/shop/apple-dev.png` |
 | `flipper-zero` | Flipper Zero | The legendary hacking multi-tool for pentesting and hardware tinkering. | Secure the Cyberpunk City network | `/shop/flipper.png` |
-| `graphics-tablet` | Graphics Tablet | A drawing tablet to sketch, paint and design your pixel art. | Design your own region | `/shop/tablet.png` |
-| `stickers-poster` | Sticker Pack + Poster | PIXL stickers and a printed poster for your wall. | Draw sprites for the Item Shop | `/shop/stickers.png` |
+| `graphics-tablet` | Graphics Tablet | A drawing tablet to sketch, paint and design your pixel art and ship even more to pixl | Design your own region | `/shop/tablet.png` |
+| `stickers-poster` | Sticker Pack + Poster | PIXL stickers and a printed poster of your assets for your wall. | Draw sprites for the Item Shop | `/shop/stickers.png` |
 | `pcb-run` | Full PCB Manufacturing Run | We manufacture your own PCB design and ship the boards to you. | Build a robot arm for the Factory | `/shop/pcb.png` |
 | `robux` | 2000 Robux | 2000 Robux dropped straight into your Roblox account. | Make me a Roblox game!! | `/shop/robux.png` |
 
+Sous la grille du General Shop, le site affiche « ...and even more coming! ».
+
 ## Idées de la conversation NON ajoutées (décisions)
+
+- **Arduino Starter Kit** → retiré du site (l'image `/shop/arduino.png` est gardée si tu veux le remettre)
 
 - **Neon stuff** → refusé (« go fuck the neon stuff »)
 - **XP-Pen graphics tablet** → refusé (« xp pen are ass »), la Wacom existe déjà
