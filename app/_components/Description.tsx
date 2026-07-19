@@ -120,7 +120,9 @@ export function WTFISTHIS() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
       >
-        A pixel-themed YSWS where you build real projects to level up your character and unlock real-world funding. Go on an adventure to explore new things, create fun projects with others, chat with NPCs, and test projects with others and stuff.
+        Centuries ago, the Great Static shattered Pixl into islands lost in the Void. The Core
+        reached into our universe for help. That&apos;s you. A pixel-themed YSWS where every real
+        project you ship repairs the world and unlocks real-world rewards.
       </motion.p>
 
       <motion.div
@@ -136,12 +138,12 @@ export function WTFISTHIS() {
         <motion.div variants={cardVariants} className="flex flex-col gap-2 text-left">
           <div className="aspect-square flex flex-col">
             <div className="flex-1 flex flex-col justify-center gap-1">
-              <p className="font-pixel text-[#ff8c37] leading-none" style={{ fontSize: "clamp(1rem, 5vw, 4rem)" }}>You Ship</p>
-              <p className="text-black/70 leading-snug text-xs sm:text-sm md:text-lg lg:text-2xl">Hardware & software sidequests given by NPCs, harder quests unlock as you level up</p>
+              <p className="font-pixel text-[#ff8c37] leading-none" style={{ fontSize: "clamp(1rem, 4vw, 3rem)" }}>You Repair</p>
+              <p className="text-black/70 leading-snug text-xs sm:text-sm md:text-lg lg:text-xl">Ship real hardware & software sidequests for NPCs. Every project becomes Restoration Energy that rebuilds a broken piece of Pixl</p>
             </div>
             <div className="flex-1 flex flex-col justify-center gap-1">
-              <p className="font-pixel text-[#ec3750] leading-none" style={{ fontSize: "clamp(1rem, 5vw, 4rem)" }}>We Ship</p>
-              <p className="text-black/70 leading-snug text-xs sm:text-sm md:text-lg lg:text-2xl">Niche prizes & grants matched to what you built, every level has its rewards</p>
+              <p className="font-pixel text-[#ec3750] leading-none" style={{ fontSize: "clamp(1rem, 4vw, 3rem)" }}>The Core Pays</p>
+              <p className="text-black/70 leading-snug text-xs sm:text-sm md:text-lg lg:text-xl">The Core is a vault of old Pixelian tech. As you repair it, it gives its treasures back: real prizes and grants matched to what you built</p>
             </div>
           </div>
         </motion.div>
