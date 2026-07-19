@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "When is Pixl starting?",
     answer:
-      "We're still looking for a sponsor, but Pixl should kick off around August or September. Stay tuned!",
+      "We don't officially have a sponsor yet, but Pixl should kick off around August or September. Stay tuned!",
   },
   {
     question: "Is this free?",

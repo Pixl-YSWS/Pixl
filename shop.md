@@ -25,9 +25,9 @@ Les descriptions affichées sur le site sont dans `app/_components/Shop.tsx` (ch
 | `github-pro` | GitHub Pro (1 year) | A year of GitHub Pro for your projects. | 500 | 10 h | ~50 $ | `/shop/github.png` |
 | `retro-handheld` | Retro Handheld (RG35XX / Miyoo Mini+) | A retro handheld to play your builds and the classics on the go. | 600 | 12 h | ~60 $ | `/shop/retro-handheld.png` |
 | `wacom-intuos` | Wacom Intuos (Small) | A Wacom drawing tablet, the classic for digital art. | 600 | 12 h | ~60 $ | `/shop/wacom.png` |
-| `raspberry-pi-5` | Raspberry Pi 5 | A Raspberry Pi 5 to run your servers, emulators and experiments. | 800 | 16 h | ~80 $ | `/shop/rpi.png` |
 | `gamemaker` | GameMaker Pro | GameMaker Professional license to export your games everywhere. | 1000 | 20 h | ~100 $ | `/shop/gamemaker.png` |
 | `mechanical-keyboard` | Mechanical Keyboard | A solid mechanical keyboard for late night game jams. | 1000 | 20 h | ~100 $ | `/shop/keyboard.png` |
+| `raspberry-pi-5` | Raspberry Pi 5 | A Raspberry Pi 5 to run your servers, emulators and experiments. | 1200 | 24 h | ~120 $ | `/shop/rpi.png` |
 | `sony-headphones` | Sony WH-1000XM4 | Noise cancelling headphones to get in the zone. | 2500 | 50 h | ~250 $ | `/shop/sony-headphones.png` |
 | `a1-mini` | Bambu Lab A1 Mini | A fast, quiet 3D printer. Print your own game props and cases. | 2500 | 50 h | 249 $ | `/shop/a1-mini.png` |
 | `monitor-4k` | 27" 4K Monitor | A 27 inch 4K monitor. Your pixels deserve more pixels. | 3000 | 60 h | ~300 $ | `/shop/monitor-4k.png` |

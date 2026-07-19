@@ -117,7 +117,7 @@ export function Hero() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.7 }}
           >
             {rsvped ? (
-              <div className="flex w-full flex-col items-center bg-[#ec3750] px-5 py-1.5 text-white border-black border-r-8 border-t-2 border-l-2 border-b-8">
+              <div className="flex flex-col items-center self-center bg-[#ec3750] px-24 py-1.5 text-white border-black border-r-8 border-t-2 border-l-2 border-b-8">
                 <p className="text-base sm:text-lg text-center">
                   you&apos;re already in
                 </p>

@@ -187,8 +187,8 @@ const generalItems = [
     id: "raspberry-pi-5",
     name: "Raspberry Pi 5",
     description: "A Raspberry Pi 5 to run your servers, emulators and experiments.",
-    price: 800,
-    hours: 16,
+    price: 1200,
+    hours: 24,
     image: "/shop/rpi.png",
   },
   {
@@ -286,12 +286,14 @@ function ShopCard({ item }: { item: { id: string; name: string; description?: st
         {!item.sidequest && item.description && (
           <p className="text-[10px] font-sans text-black/50 leading-snug">{item.description}</p>
         )}
+        {/* prix cachés pour l'instant — décommente ce bloc pour les réafficher
         {item.price && (
           <div className="flex items-baseline gap-2">
             <p className="font-pixel text-[#ff8c37] text-lg">{item.price}px</p>
             <p className="text-[10px] font-sans text-black/40">~{item.hours}h</p>
           </div>
         )}
+        */}
       </div>
     </motion.div>
   );
@@ -336,6 +338,16 @@ export function Shop() {
           transition={{ duration: 0.5, delay: 0.15 }}
         >
           The shop is still under construction and isn&apos;t complete yet, more items coming!
+        </motion.p>
+        <motion.p
+          className="mt-4 inline-block font-pixel text-sm md:text-base bg-[#ff8c37] text-white px-4 py-2 border-2 border-black"
+          style={{ boxShadow: "4px 4px 0px #000" }}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Head to the in-game shop to see the prices and the full catalog!
         </motion.p>
       </div>
 
