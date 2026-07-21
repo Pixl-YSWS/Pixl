@@ -10,6 +10,11 @@ const faqs = [
       "Teen hackers, first-time builders, designers, coders, and curious friends who want to make something real.",
   },
   {
+    question: "Wait, why is it called Pixl?",
+    answer:
+      "The world was originally called Origin, until its Core got overloaded with every invention ever made and broke apart into pixelated islands. Its survivors crossed universes looking for the only people they figured could actually help rebuild it: Hack Clubbers. Together they're now the Pixelians, and they renamed the place Pixl.",
+  },
+  {
     question: "Do I need a team?",
     answer: "No. Come solo or with friends. ",
   },

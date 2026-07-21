@@ -120,9 +120,10 @@ export function WTFISTHIS() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
       >
-        Centuries ago, the Great Static shattered Pixl into islands lost in the Void. The Core
-        reached into our universe for help. That&apos;s you. A pixel-themed YSWS where every real
-        project you ship repairs the world and unlocks real-world rewards.
+        Centuries ago, Origin was the greatest digital civilization ever built, until the Great
+        Static shattered it into islands lost in the Void. Its people crossed universes and found
+        Hack Clubbers, who helped rebuild it under a new name: Pixl. A pixel-themed YSWS where
+        every real project you ship repairs the world and unlocks real-world rewards.
       </motion.p>
 
       <motion.div
