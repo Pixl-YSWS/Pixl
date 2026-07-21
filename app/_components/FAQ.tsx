@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "When is Pixl starting?",
     answer:
-      "We don't officially have a sponsor yet, but Pixl should kick off around August or September. Stay tuned!",
+      "Pixl launches August 18th, 2026 — there's a live countdown ticking down to it further up the page. Stay tuned!",
   },
   {
     question: "Is this free?",
