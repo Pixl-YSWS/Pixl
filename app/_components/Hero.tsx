@@ -101,6 +101,18 @@ export function Hero() {
       />
       <div className="relative z-10 flex h-screen w-full items-center justify-center flex-col">
         <div className="flex flex-col items-center px-4">
+          <motion.div
+            className="bg-[#fffaf7] border-2 border-black px-4 py-2 sm:px-5 sm:py-3 mb-4 sm:mb-6 max-w-[15rem] sm:max-w-sm mx-4 translate-y-4 sm:translate-y-6"
+            style={{ boxShadow: "4px 4px 0px #000", rotate: "-1.5deg" }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.45 }}
+          >
+            <p className="font-sans font-bold text-xs sm:text-sm leading-snug text-center text-black">
+              <span className="text-[#ff8c37]">You ship</span> projects inside a story-driven
+              game, <span className="text-[#ec3750]">we ship</span> real prizes to your door.
+            </p>
+          </motion.div>
           <motion.p
             className="font-pixel text-[#ec3750] text-[6rem] sm:text-[9rem] md:text-[13rem] lg:text-[16rem] select-none leading-none"
             style={{ textShadow: "var(--pixl-shadow)" }}
