@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "When is Pixl starting?",
     answer:
-      "Pixl launches August 18th, 2026 — there's a live countdown ticking down to it further up the page. Stay tuned!",
+      "Pixl launches August 18th, 2026 , there's a live countdown ticking down to it further up the page. Stay tuned!",
   },
   {
     question: "Is this free?",

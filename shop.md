@@ -1,4 +1,4 @@
-# PIXL Shop — Inventaire
+# PIXL Shop , Inventaire
 
 Conversion : **1 h de travail = 5 $ = 50 pixels** (donc 10 px = 1 $).
 
@@ -33,7 +33,7 @@ Les descriptions affichées sur le site sont dans `app/_components/Shop.tsx` (ch
 | `monitor-4k` | 27" 4K Monitor | A 27 inch 4K monitor. Your pixels deserve more pixels. | 3000 | 60 h | ~300 $ | `/shop/monitor-4k.png` |
 | `ipad` | iPad (11th gen) | An iPad with pencil support for drawing and playtesting. | 4500 | 90 h | ~450 $ | `/shop/ipad.png` |
 
-## Sidequest Rewards (pas achetables — récompenses de sidequests)
+## Sidequest Rewards (pas achetables , récompenses de sidequests)
 
 | ID | Nom | Description | Sidequest | Image |
 |---|---|---|---|---|
@@ -58,7 +58,7 @@ Sous la grille du General Shop, le site affiche « ...and even more coming! ».
 
 ## Où éditer les descriptions
 
-1. **Website** : `app/_components/Shop.tsx` — chaque item a un champ `description` (les items sont triés par prix croissant dans `generalItems`, et `sidequestRewards` pour les récompenses).
-2. **Ce fichier** : `shop.md` — colonne « Description » des tableaux ci-dessus.
+1. **Website** : `app/_components/Shop.tsx` , chaque item a un champ `description` (les items sont triés par prix croissant dans `generalItems`, et `sidequestRewards` pour les récompenses).
+2. **Ce fichier** : `shop.md` , colonne « Description » des tableaux ci-dessus.
 
 Les deux ne sont pas synchronisés automatiquement : édite les deux à la main (cherche l'`id` de l'item pour retrouver la bonne ligne).
